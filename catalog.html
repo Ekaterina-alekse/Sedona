@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Отели Седоны</title>
+    <link rel="stylesheet" href="styles/styles.css"
   </head>
 
   <body>
@@ -46,7 +47,8 @@
       </nav>
     </header>
 
-    <main class="main">
+    <main class="main-catalog">
+      <div class="filters">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -118,9 +120,10 @@
           </ul>
         </form>
       </section>
+      </div>
 
       <section class="search-result">
-        <h2>Найдено гостиниц: 38</h2>
+        <h2 class="lead">Найдено гостиниц: 38</h2>
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешевые</option>
           <option value="popular">Сначала популярные</option>
@@ -212,8 +215,9 @@
     </main>
 
     <footer class="page-footer">
-      <section class="newsletter">
-        <h2>Подписаться</h2>
+      <section class="newsletter-catalog">
+        <h2 class="lead">Подпишитесь на рассылку</h2>
+         <p class="desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="newsletter-email">Email</label>
           <input class="field" placeholder="Ваш e-mail" type="email" id="newsletter-email" name="newsletter-email"
