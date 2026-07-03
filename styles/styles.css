@@ -79,6 +79,32 @@ flex-grow: 1;
   text-decoration: none;
 }
 
+.info {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.footer-social {
+  width: 200px;
+}
+
+.contacts-phone {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.htmlacademy-link {
+  width: 115px;
+  margin-left: auto;
+}
+
+/*
+.visually-hidden {
+  display: none;
+}*/
+
+
 /*index*/
 .hero {
   background-color: #aabeca;
@@ -121,7 +147,15 @@ flex-grow: 1;
 
 .advantages-item {
   width: 400px;
-  padding: 102px 85px;
+}
+
+.pictures {
+  width: 1200px;
+}
+
+.advantages-item.pictures {
+  background-color: #82B3D3;
+  color: #ffffff;
 }
 
 .advantages-title, .service-title {
@@ -134,9 +168,15 @@ flex-grow: 1;
   background-color: #F0F6FA;
 }
 
-.advantages-item.pictures {
-  background-color: #82B3D3;
-  color: #ffffff;
+.service-list {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.service-item{
+  width: 400px;
 }
 
 .light-blue {
@@ -203,12 +243,25 @@ flex-grow: 1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  text-align: left;
+}
+
+.head-main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .inner-header-title {
+  width: 1060px;
+  margin-right: auto;
   font-size: 60px;
   line-height: 78px;
-  text-align: center;
+}
+
+.breadcrumbs {
+  width: 1060px;
 }
 
 .breadcrumbs-item {
@@ -221,6 +274,11 @@ flex-grow: 1;
   line-height: 21px;
   color: #ffffff;
   text-decoration: none;
+}
+
+.catalog-filter {
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .catalog-filter-title {
@@ -277,6 +335,40 @@ flex-grow: 1;
   color: #333333;
 }
 
+.search-result {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.search-result .lead {
+  width: 338px;
+  margin-right: 200px;
+}
+
+.select-control {
+  width: 300px;
+}
+
+.view {
+  width: 215px;
+  margin-left: auto;
+}
+
+.hotel-list{
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+  text-align: left;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hotel-card {
+  width: 340px;
+}
+
 .hotel-card-title {
   font-size: 24px;
   line-height: 28px;
@@ -312,6 +404,21 @@ flex-grow: 1;
   line-height: 20px;
   background-color: #F2F2F2;
   color: #333333;
+}
+
+.pagination {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.pagination-item {
+  width: 60px;
+  margin-right: 8px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
 }
 
 .pagination-link {
