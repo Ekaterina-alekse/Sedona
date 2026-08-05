@@ -569,8 +569,7 @@ input[type="reset"] {
   font-weight: 700;
   color: #000000;
   background-color: #E5E5E5;
-  border: 3px solid #82B3D3;
-  outline: none;
+  outline: 3px solid #82B3D3;
 }
 
 .button-subscribe {
@@ -792,7 +791,7 @@ input[type="reset"] {
 }
 
 .control:focus-within .control-mark {
-  border: 3px solid #82B3D3;
+  outline: 3px solid #82B3D3;
 }
 
 .control:active .control-mark {
@@ -826,11 +825,6 @@ input[type="reset"] {
 
 .control:hover .filter-label {
   opacity: 0.5;
-}
-
-.control:focus-within .control-mark {
-  outline: 3px solid #82B3D3;
-  outline-offset: 2px;
 }
 
 .control:active .control-mark {
@@ -887,8 +881,7 @@ input[type="reset"] {
 .catalog-min:focus,
 .catalog-max:focus {
   background-color: #E5E5E5;
-  border: 3px solid #82B3D3;
-  outline: none;
+  outline: 3px solid #82B3D3;
 }
 
 
@@ -946,7 +939,7 @@ input[type="reset"] {
 
 .range-handle:focus {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  border: 3px solid #82B3D3;
+  outline: 3px solid #82B3D3;
 }
 
 .range-handle:active {
@@ -1017,7 +1010,7 @@ input[type="reset"] {
 }
 
 .catalog-reset:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .catalog-reset:active {
@@ -1073,7 +1066,7 @@ input[type="reset"] {
 }
 
 .view:focus {
-  border: 2px solid #68A2CA;
+  outline: 2px solid #68A2CA;
 }
 
 .view:active {
@@ -1284,8 +1277,6 @@ input[type="reset"] {
   grid-column: 1 / 2;
 }
 
-
-
 .hotel-card-rating {
   grid-column: 2 / -1;
   width: 140px;
@@ -1358,4 +1349,305 @@ input[type="reset"] {
 .catalog-subscribe {
   margin: 0;
   padding: 96px 250px 104px;
+}
+
+/*.modal-container {
+  display: none;
+}
+  */
+
+.modal-container.open {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 70px 64px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  width: 717px;
+}
+
+.modal-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 64px;
+}
+
+.modal-close-button {
+  position: absolute;
+  margin: 64px 52px 0 0;
+  top: 0;
+  right: 0;
+  width: 52px;
+  height: 52px;
+  color: #F2F2F2;
+  border: none;
+  border-radius: 50%;
+}
+
+.modal-close-button:hover {
+  color: #E5E5E5;
+}
+
+.modal-close-button:focus {
+  color: #E5E5E5;
+  outline: 3px solid #82B3D3;
+}
+
+.modal-close-button:active {
+  opacity: 0.3;
+}
+
+.booking-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-name {
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.date-input-wrapper {
+  position: relative;
+  width: 440px;
+}
+
+.date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.date {
+  -moz-appearance: textfield;
+}
+
+.custom-calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  transform: translateY(-50%);
+  color: #333333;
+  pointer-events: none;
+}
+
+.date {
+  width: 100%;
+  padding: 12px 40px 12px 20px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 4px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 4px;
+}
+
+.date:hover {
+  background-color: #E5E5E5;
+}
+
+.date:focus {
+  background-color: #E5E5E5;
+  outline: 3px solid #82B3D3;
+}
+
+.warning {
+  width: 589px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #FF5757;
+  padding-left: 157px;
+  margin-bottom: 23px;
+}
+
+.hint {
+  width: 589px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  padding: 0;
+  padding-left: 157px;
+  margin-bottom: 23px;
+}
+
+.guests {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 260px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.guest-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 110px;
+  margin-left: auto;
+}
+
+.guest-control .quantity {
+  width: 100%;
+  padding: 14px 40px;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 4px;
+}
+
+.guest-control .quantity:hover {
+  background-color: #E5E5E5;
+}
+
+.guest-control .quantity:focus {
+  background-color: #E5E5E5;
+  outline: 3px solid #82B3D3;
+}
+
+.guest-control .quantity::-webkit-outer-spin-button,
+.guest-control .quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.guest-control .quantity {
+  -moz-appearance: textfield;
+}
+
+.guest-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #D6D0CD;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.guest-btn-minus {
+  left: 8px;
+}
+
+.guest-btn-plus {
+  right: 8px;
+}
+
+.guest-btn:hover {
+  color: #000000;
+}
+
+.guest-btn:focus {
+  color: #000000;
+  outline: 3px solid #82B3D3;
+}
+
+.guest-btn:active {
+  color: #D6D0CD;
+}
+
+.icon-info {
+  width: 26px;
+  height: 26px;
+  color: #83B3D3;
+  margin-left: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.icon-info:hover,
+.icon-info:focus {
+  color: #68A2CA;
+}
+
+.icon-info:active {
+  opacity: 0.3;
+}
+
+.modal-info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 256px;
+  height: 152px;
+  padding: 15px 22px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  border: none;
+  background-image: url("../images/decor/rectangle-info.svg");
+  background-size: 256px 152px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 25px;
+  margin-right: 112px;
+}
+
+.modal-search {
+  width: 577px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: auto;
+  background-color: #82B3D3;
+  border-radius: 10px;
+  border: none;
+  padding: 18px 250px;
+}
+
+.modal-search:hover,
+.modal-search:focus {
+  background-color: #68A2CA;
+}
+
+.modal-search:active {
+  color: #95BEDA;
+  background-color: #68A2CA;
 }
