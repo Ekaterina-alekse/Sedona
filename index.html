@@ -161,7 +161,8 @@
           <p class="desc-white">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-email">Введите Ваш Email</label>
-            <input class="field" placeholder="Ваш e-mail" type="email" id="subscribe-email" name="subscribe-email">
+            <input class="field" placeholder="Ваш e-mail" type="email" id="subscribe-email" name="subscribe-email"
+              required>
             <button class="button-subscribe" type="submit">Подписаться</button>
           </form>
         </section>
@@ -218,22 +219,15 @@
       </footer>
     </div>
     <!--Модальное окно-->
-    <div class="modal-container open">
+    <div class="modal-container modal-container-close">
       <div class="modal">
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в седоне</h2>
-          <button class="modal-close-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="none" viewBox="0 0 52 52">
-              <circle cx="26" cy="26" r="26" fill="currentColor" />
-              <path fill="#000"
-                d="m33.49 20.78-1.3-1.29-5.7 5.7-5.7-5.7-1.3 1.3 5.7 5.7-5.7 5.7 1.3 1.3 5.7-5.7 5.7 5.7 1.3-1.3-5.7-5.7z" />
-            </svg>
-            <span class="visually-hidden">Закрыть</span>
-          </button>
           <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="input-name" for="check-in-date">Дата Заезда:</label>
             <div class="date-input-wrapper">
-              <input class="date" type="date" id="check-in-date" name="check-in-date">
+              <input class="date" type="text" id="check-in-date" name="check-in-date" required
+                placeholder="Укажите дату">
               <svg class="custom-calendar-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="none"
                 viewBox="0 0 16 15">
                 <path fill="currentColor" d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5" />
@@ -246,7 +240,8 @@
             <p class="warning">Мы не можем отправить вас в прошлое.</p>
             <label class="input-name" for="departure-date">Дата Выезда:</label>
             <div class="date-input-wrapper">
-              <input class="date" type="date" id="departure-date" name="departure-date">
+              <input class="date" type="text" id="departure-date" name="departure-date" required
+                placeholder="Укажите дату">
               <svg class="custom-calendar-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="none"
                 viewBox="0 0 16 15">
                 <path fill="currentColor" d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5" />
@@ -261,28 +256,36 @@
               <label class="input-name" for="adults">Взрослые:</label>
               <div class="guest-control">
                 <button class="guest-btn guest-btn-minus" type="button">−</button>
-                <input class="quantity" type="number" id="adults" name="adults" value="2" min="0">
+                <input class="quantity" type="number" id="adults" name="adults" value="2" min="1" required>
                 <button class="guest-btn guest-btn-plus" type="button">+</button>
               </div>
             </div>
             <div class="guests">
               <label class="input-name" for="childs">Дети:</label>
-              <span class="icon-info"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                  viewBox="0 0 26 26">
-                  <circle cx="13" cy="13" r="13" fill="currentColor" />
-                  <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2zm2 12h-2v-9h2z" clip-rule="evenodd" />
-                </svg></span>
+              <div class="icon-info-wrapper">
+                <span class="icon-info" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                    fill="currentColor" viewBox="0 0 26 26">
+                    <circle cx="13" cy="13" r="13" fill="currentColor" />
+                    <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2zm2 12h-2v-9h2z" clip-rule="evenodd" />
+                  </svg></span>
+                <span class="modal-info">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                  Дети до 6 лет размещаются бесплатно.</span>
+              </div>
               <div class="guest-control">
                 <button class="guest-btn guest-btn-minus" type="button">−</button>
                 <input class="quantity" type="number" id="childs" name="childs" value="0" min="0">
                 <button class="guest-btn guest-btn-plus" type="button">+</button>
               </div>
             </div>
-            <p class="modal-info">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети
-              до 6
-              лет
-              размещаются бесплатно.</p>
             <button class="modal-search" type="submit">Найти</button>
+            <button class="modal-close-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="none" viewBox="0 0 52 52">
+                <circle cx="26" cy="26" r="26" fill="currentColor" />
+                <path fill="#000"
+                  d="m33.49 20.78-1.3-1.29-5.7 5.7-5.7-5.7-1.3 1.3 5.7 5.7-5.7 5.7 1.3 1.3 5.7-5.7 5.7 5.7 1.3-1.3-5.7-5.7z" />
+              </svg>
+              <span class="visually-hidden">Закрыть</span>
+            </button>
           </form>
         </section>
       </div>

@@ -1523,10 +1523,6 @@ input[type="reset"] {
 
 /*Модальное окно*/
 .modal-container {
-  display: none;
-}
-
-.modal-container.open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1536,6 +1532,10 @@ input[type="reset"] {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-container-close {
+  display: none;
 }
 
 .modal {
@@ -1550,6 +1550,7 @@ input[type="reset"] {
 }
 
 .modal-title {
+  width: 525px;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: 36px;
@@ -1609,19 +1610,6 @@ input[type="reset"] {
 .date-input-wrapper {
   position: relative;
   width: 440px;
-}
-
-.date::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.date {
-  -moz-appearance: textfield;
 }
 
 .custom-calendar-icon {
@@ -1806,25 +1794,42 @@ input[type="reset"] {
   opacity: 0.3;
 }
 
+.icon-info-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-info:hover,
+.icon-info:focus {
+  color: #68A2CA;
+}
+
+.icon-info:active {
+  opacity: 0.3;
+}
+
 .modal-info {
+  display: none;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(calc(-50% + 6px));
   width: 256px;
-  height: 152px;
   padding: 30px 22px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #ffffff;
-  border: none;
   background-image: url("../images/decor/rectangle-info.svg");
   background-size: 256px 152px;
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 25px;
-  margin-right: 112px;
+  border: none;
+}
+
+.icon-info-wrapper:hover .modal-info,
+.icon-info-wrapper:focus-within .modal-info {
+  display: block;
 }
 
 .modal-search {
