@@ -1007,7 +1007,9 @@ input[type="reset"] {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
+  padding: 10px;
   background-color: #ffffff;
+  background-clip: padding-box;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -1464,9 +1466,9 @@ input[type="reset"] {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-/*.modal-container-close {
+.modal-container-close {
   display: none;
-}*/
+}
 
 .modal {
   position: relative;
